@@ -1,0 +1,25 @@
+@startuml
+class WortBildPaar {
+  -wort: String
+  -bildURL: String
+  +WortBildPaar(wort: String, bildURL: String)
+  +getBildURL(): String
+  +checkWort(wort: String): Boolean
+  {static} +isValid(bildURL: String): Boolean
+}
+
+class RechtschreibTrainer {
+  -wortBildPaare: ArrayList<WortBildPaar>
+  -ausgewaehltesPaar: WortBildPaar
+  -versucheGesamt: int
+  -versucheRichtig: int
+  -versucheFalsch: int
+  +RechtschreibTrainer()
+  +waehleZufaelligesPaar(): void
+  +rateWort(wort: String): Boolean
+  +zeigeStatistik(): void
+}
+
+RechtschreibTrainer "1" --> "1..*" WortBildPaar : hat
+
+@enduml
