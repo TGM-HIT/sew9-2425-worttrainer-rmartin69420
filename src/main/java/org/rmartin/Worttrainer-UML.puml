@@ -21,6 +21,17 @@ class RechtschreibTrainer {
   +statistik(): String
 }
 
-RechtschreibTrainer "1" o-- "1..*" WortBildPaar : hat
+interface Speicherstrategie {
+  +save(trainer: RechtschreibTrainer): void
+  +load(): RechtschreibTrainer
+}
 
+class JSON {
+  +save(trainer: RechtschreibTrainer): void
+  +load(): RechtschreibTrainer
+}
+
+RechtschreibTrainer "1" o-- "1..*" WortBildPaar : hat
+RechtschreibTrainer ..> Speicherstrategie : verwendet
+JSON ..|> Speicherstrategie
 @enduml
