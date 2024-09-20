@@ -6,6 +6,7 @@ class WortBildPaar {
   +getBildURL(): String
   +checkWort(wort: String): Boolean
   {static} +isValid(bildURL: String): Boolean
+  +getWort(): String
 }
 
 class RechtschreibTrainer {
@@ -17,9 +18,9 @@ class RechtschreibTrainer {
   +RechtschreibTrainer()
   +waehleZufaelligesPaar(): void
   +rateWort(wort: String): Boolean
-  +zeigeStatistik(): void
+  +statistik(): String
 }
 
-RechtschreibTrainer "1" --> "1..*" WortBildPaar : hat
+RechtschreibTrainer "1" o-- "1..*" WortBildPaar : hat
 
 @enduml
