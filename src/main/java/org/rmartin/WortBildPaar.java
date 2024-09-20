@@ -71,7 +71,11 @@ public class WortBildPaar {
      * @param wort das neue Wort
      */
     public void setWort(String wort) {
-        this.wort = wort;
+        if(checkWort(wort)) {
+            this.wort = wort;
+        } else {
+            throw new NullPointerException("Bitte gültiges Wort eingeben!");
+        }
     }
 
     /**
@@ -87,6 +91,10 @@ public class WortBildPaar {
      * @param bildURL den neuen URL
      */
     public void setBildURL(String bildURL) {
-        this.bildURL = bildURL;
+        if (isValid(bildURL)) {
+            this.bildURL = bildURL;
+        } else {
+            throw new IllegalArgumentException("Bitte validen URL verwenden!");
+        }
     }
 }
