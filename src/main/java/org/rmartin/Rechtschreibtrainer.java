@@ -79,4 +79,8 @@ public class Rechtschreibtrainer {
     public WortBildPaar getAusgewaehltesPaar() {
         return ausgewaehltesPaar;
     }
+
+    public ArrayList<WortBildPaar> getWortBildPaare() {
+        return wortBildPaare;
+    }
 }
