@@ -31,7 +31,15 @@ class JSON {
   +load(): RechtschreibTrainer
 }
 
-RechtschreibTrainer "1" o-- "1..*" WortBildPaar : hat
-RechtschreibTrainer ..> Speicherstrategie : verwendet
+class GUI {
+  +start(): void
+  +zeigeStatistikUndBild(): void
+  +eingabeWort(): String
+}
+
+RechtschreibTrainer "1" o-- "0..*" WortBildPaar : hat
+GUI ..> Speicherstrategie : verwendet
 JSON ..|> Speicherstrategie
+GUI ..> RechtschreibTrainer : verwendet
+Speicherstrategie ..> RechtschreibTrainer : verwendet
 @enduml
