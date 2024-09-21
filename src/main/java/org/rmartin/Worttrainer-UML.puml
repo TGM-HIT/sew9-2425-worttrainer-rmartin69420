@@ -33,8 +33,7 @@ class JSON {
 
 class GUI {
   +start(): void
-  +zeigeStatistikUndBild(): void
-  +eingabeWort(): String
+  +zeigeStatistikUndBildUndAbfrage(): String
 }
 
 RechtschreibTrainer "1" o-- "0..*" WortBildPaar : hat

@@ -23,11 +23,13 @@ public class Rechtschreibtrainer {
      */
     public Rechtschreibtrainer(){
         wortBildPaare = new ArrayList<>();
-        wortBildPaare.add(new WortBildPaar("Amadeus", "https://img1.wsimg.com/isteam/ip/a2084964-e52e-4dd5-879e-4247b3041b95/Amadeus.png/:/cr=t:6.53%25,l:0%25,w:100%25,h:86.93%25/rs=w:365,h:487,cg:true"));
-        wortBildPaare.add(new WortBildPaar("Mann", "https://static.wikia.nocookie.net/listofdeaths/images/7/70/Patrick_Bateman.webp/revision/latest?cb=20220422182540"));
-        wortBildPaare.add(new WortBildPaar("Hot dog", "https://c8.alamy.com/compde/a1nb6c/daschund-dog-in-hot-dog-kostum-verkleidet-a1nb6c.jpg"));
-        wortBildPaare.add(new WortBildPaar("Kacper", "https://c8.alamy.com/comp/R04P00/an-elderly-polish-man-with-a-beard-and-pipe-wearing-traditional-clothing-in-the-town-of-zakopone-poland-europe-R04P00.jpg"));
-        wortBildPaare.add(new WortBildPaar("Spongebob", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2D5kwPWqew0Xot0t9vDwMibR4cssV6fvPPjp1hB_m2c5-QqfitDL1RpVaq3RsxS4oH3Y&usqp=CAU"));
+
+        wortBildPaare.add(new WortBildPaar("amadeus", "https://img1.wsimg.com/isteam/ip/a2084964-e52e-4dd5-879e-4247b3041b95/Amadeus.png/:/cr=t:6.53%25,l:0%25,w:100%25,h:86.93%25/rs=w:365,h:487,cg:true"));
+        wortBildPaare.add(new WortBildPaar("mann", "https://static.wikia.nocookie.net/listofdeaths/images/7/70/Patrick_Bateman.webp/revision/latest?cb=20220422182540"));
+        wortBildPaare.add(new WortBildPaar("hot dog", "https://c8.alamy.com/compde/a1nb6c/daschund-dog-in-hot-dog-kostum-verkleidet-a1nb6c.jpg"));
+        wortBildPaare.add(new WortBildPaar("kacper", "https://c8.alamy.com/comp/R04P00/an-elderly-polish-man-with-a-beard-and-pipe-wearing-traditional-clothing-in-the-town-of-zakopone-poland-europe-R04P00.jpg"));
+        wortBildPaare.add(new WortBildPaar("spongebob", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2D5kwPWqew0Xot0t9vDwMibR4cssV6fvPPjp1hB_m2c5-QqfitDL1RpVaq3RsxS4oH3Y&usqp=CAU"));
+
         versucheGesamt = 0;
         versucheRichtig = 0;
         versucheFalsch = 0;
