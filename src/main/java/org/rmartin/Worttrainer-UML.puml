@@ -19,6 +19,8 @@ class RechtschreibTrainer {
   +waehleZufaelligesPaar(): void
   +rateWort(wort: String): Boolean
   +statistik(): String
+  +getausgewaehltesPaar(): WortBildPaar
+  +getwortBildPaare(): ArrayList<WortBildPaar>
 }
 
 interface Speicherstrategie {
@@ -33,7 +35,8 @@ class JSON {
 
 class GUI {
   +start(): void
-  +zeigeStatistikUndBildUndAbfrage(): String
+  +zeigeStatistikUndBildUndAbfrage(letzterVersuchErfolgreich: boolean): String
+  +getTrainer(): RechtschreibTrainer
 }
 
 RechtschreibTrainer "1" o-- "0..*" WortBildPaar : hat
