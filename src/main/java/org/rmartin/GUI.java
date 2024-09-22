@@ -7,7 +7,7 @@ import java.net.URL;
 /**
  * Benutzeroberfläche zum verwenden des Worttrainers
  * @author Raphael Martin
- * @version 2024-09-21
+ * @version 2024-09-22
  */
 public class GUI {
     private Rechtschreibtrainer trainer;
@@ -104,5 +104,9 @@ public class GUI {
         } else {
             return null; // Benutzer hat abgebrochen
         }
+    }
+
+    public Rechtschreibtrainer getTrainer() {
+        return trainer;
     }
 }
